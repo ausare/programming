@@ -1,9 +1,7 @@
 use strict;
 use warnings;
 use term::ANSIColor;
-Changes 2
-Changes
-
+#adding this comment
 
 my $line1 = "This is a patch test"; 
 print color('red');
