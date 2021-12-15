@@ -1,5 +1,5 @@
 #! /usr/bin/js
-//Map performs an operation on an array and returns the modified array
+//Map is nondestructive 
 const prices = [20, 10, 5, 1201, 12901]
 
 let halfOffPrices = prices.map((price) => {

@@ -19,3 +19,6 @@ console.log(promos)
 //  'This is the deal: 25'
 //]
 
+products
+	.map(product => console.log(product.name.toUpperCase()))
+console.log(products)

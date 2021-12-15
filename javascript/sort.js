@@ -1,5 +1,6 @@
-#!/usr/bin/js
+#!/usr/local/bin/node
 
+//sort is destructive
 let numbers = [ 10, 40, 60, 100, 120, 4, 5]
 // This will only sort by the first digit
 // so 1, 1, 1, 4, 4, 6, 7 for this example
