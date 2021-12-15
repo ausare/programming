@@ -1,4 +1,17 @@
 #!/usr/local/bin/node
+
+//converting to an array
+/* 
+	This is especially useful for converting 
+	HTML Collections to an array
+*/
+let array = "This is going to be a collection"
+
+let newArray = Array.from(array)
+console.log(newArray)
+
+
+
 //chaining methods
 const products = [
 	{name: 'gold star', price: 30},

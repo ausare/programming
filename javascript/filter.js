@@ -1,5 +1,5 @@
 #! /usr/bin/js
-//Filter is non-destructive and boolean by nature
+//Filter is nondestructive and boolean by nature
 const obj = [
 	{name : "Jason", premium: true},
 	{name : "William", premium: true},
