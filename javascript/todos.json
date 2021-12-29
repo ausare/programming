@@ -1,0 +1,5 @@
+[
+    {"comment"  : "unlike javascript object JSON needs to be in double quotes"},
+	{"comment2" : "boolean and numbers don't need to be in double quotes"},
+	{"Jason"    : "Gifford"}
+]
