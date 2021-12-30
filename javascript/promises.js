@@ -9,10 +9,21 @@ const getSomething = () => {
 	});
 }
 
-getSomething().then((data) => {
-	console.log(data)
-}, (err) => {
-	console.log(err)
-})
+//messy way of doing things
+//getSomething().then((data) => {
+//	console.log(data)
+//}, (err) => {
+//	console.log(err)
+//})
+
+//cleaner way of doing things
+getSomething()
+	.then(data => {
+		console.log(data)
+	})
+	.catch(err => {
+		console.log(err)
+	})
+	
 
 
