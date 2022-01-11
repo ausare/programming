@@ -1,40 +1,46 @@
 // creating a class is like a blueprint for an object
 
 class User {
-    // first thing is to create a constructor
-    constructor(username, email) {
-        // set up properties 
-        // 'this' refers to this specific instance
-				// when the object was created
-				this.username = username
-        this.email = email
-				this.incNum = 0
-    } // there is no need to added a comma here in classes
+	// first thing is to create a constructor
+	constructor(username, email) {
+		// set up properties 
+		// 'this' refers to this specific instance
+		// when the object was created
+		this.username = username
+		this.email = email
+		this.incNum = 0
+	} // there is no need to added a comma here in classes
 
-    login() {
-        // regular shorthand function because arrow 
-				// function would refer to the window object
-        console.log(`User: '${this.username}' has logged in`)
-			  return this // returns this instance so that I can chain methods
-			  // if return is excluded you'll get the following error
-				// TypeError: Cannot read property 'increase' of undefined
-    }
+	login() {
+		// regular shorthand function because arrow 
+		// function would refer to the window object
+		console.log(`User: '${this.username}' has logged in`)
+		return this // returns this instance so that I can chain methods
+		// if return is excluded you'll get the following error
+		// TypeError: Cannot read property 'increase' of undefined
+	}
 
-    logout() {
-        console.log(`User: '${this.username}' has logged out`)
-				return this
-    }
+	logout() {
+		console.log(`User: '${this.username}' has logged out`)
+		return this
+	}
 
-		increase(){
-				this.incNum += 1
-				return this
-		}
+	increase() {
+		this.incNum += 1
+		return this
+	}
 
 }
 
 class Admin extends User {
-	deleteUser(){
-		users = users.filter(u => u.username !== users.username)
+	deleteUser(user) {
+		/* 
+			This took too long to figure out even when copying.
+			Forget not that filter removes the false values. in the
+			following example I'm deleting user Frank but if I said == instead
+			of !== it will remove all but the user Frank.
+		*/
+		users = users.filter(u => u.username == user.username)
 	}
 }
 
@@ -51,7 +57,8 @@ console.log(userTwo.email)
 
 userOne.login().increase().increase().logout()
 
-users = [userOne, userTwo, userAdmin]
+let users = [userOne, userTwo, userAdmin]
+
 
 console.log('This is before deleting a user:\n ', users)
 userAdmin.deleteUser(userTwo)
