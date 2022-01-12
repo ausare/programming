@@ -33,6 +33,12 @@ class User {
 }
 
 class Admin extends User {
+	// super class
+	constructor(username, email, title){
+		super(username, email) // inherits the extended class so that more can be added
+		this.title = title // this would fail without super
+	}
+	
 	deleteUser(user) {
 		/* 
 			This took too long to figure out even when copying.
