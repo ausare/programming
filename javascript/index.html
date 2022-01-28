@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -40,14 +41,25 @@
         ipsum dolor sit, amet consectetur adipisicing elit. Libero itaque iure dignissimos porro
         tempore minus facilis alias. Enim, aliquam aliquid! Quibusdam natus voluptate, magnam aliquam iste
         exercitationem error quos impediti</p>
-    <form id="textr">
-        <textarea spellcheck="true">
+    <textarea spellcheck="true" rows="4" cols="50"> </textarea>
+    <div id="counter">0</div>
 
+    <!-- <script src="snippets.js"></scripts> -->
+    <script>
+        let textCountArea = document.querySelector('textarea')
+        let counter = document.querySelector("#counter")
+        let wordTotal = new String()
+        textCountArea.value.length == 0 ? wordTotal = 0 : wordTotal = textCountArea.value.trim().split(' ').length
 
-        </textarea>
-    </form>
-    <script src="asyncAwait.js"></script>
-    <script src="snippets.js"></script>
+        counter.textContent = wordTotal
+
+        textCountArea.addEventListener('keyup', (e) => {
+            textCountArea.value.length == 0 ? wordTotal = 0 : wordTotal = textCountArea.value.trim().split(' ').length
+            counter.textContent = wordTotal
+            console.log('This is the word total', wordTotal)
+            console.log('the value of counter', counter)
+        })
+    </script>
 </body>
 
 </html>
