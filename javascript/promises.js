@@ -1,5 +1,5 @@
-//promise in it's simplest form
-//you're having trouble understanding, kinda, sorta
+// promise in it's simplest form
+// you're having trouble understanding, kinda, sorta
 const getSomething = () => {
 	// resolve, reject are built into promises
 	return new Promise((resolve, reject) => {
@@ -9,14 +9,14 @@ const getSomething = () => {
 	});
 }
 
-//messy way of doing things
-//getSomething().then((data) => {
+// messy way of doing things
+// getSomething().then((data) => {
 //	console.log(data)
-//}, (err) => {
+// }, (err) => {
 //	console.log(err)
-//})
+// })
 
-//cleaner way of doing things
+// cleaner way of doing things
 getSomething()
 	.then(data => {
 		console.log(data)
