@@ -39,3 +39,11 @@ directory.forEach(e => {
 // This is a directory: /home/kali/programming/javascript/.vscode
 // This is a directory: /home/kali/programming/javascript/leet
 
+// This worked when copying scripts locally, one to grabbing from the server
+const cwd = process.cwd()
+directory.forEach(file => {
+		fs.copyFile(path.join(cwd, 'one', file), path.join(cwd, 'two', path.parse(file).name + '.scpt'), err => {
+				if (err) throw err
+				console.log("Files hopefully have been moved")
+				})
+		})

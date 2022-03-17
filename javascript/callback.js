@@ -1,6 +1,6 @@
 
 //And here we finally are, ugh!
-//JS by its nature is synchronous 
+//JS by its nature is aynchronous 
 console.log(1)
 console.log(2)
 console.log(3)

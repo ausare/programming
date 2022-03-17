@@ -50,3 +50,8 @@ console.log("This is the name in local storage: ", local_name) // "Gifford
 
 // stripping HTML tags with RegExp
 let strippedString = originalString.replace(/(<([^>]+)>)/gi, "");
+
+// checking js syntax via cli
+node --check javascript.js
+
+
