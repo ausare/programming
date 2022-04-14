@@ -1,6 +1,6 @@
 #! /usr/bin/js
-//note to self, you keep forgetting to 
-//return this and to set the initial setting.
+// note to self, you keep forgetting to 
+// return this and to set the initial setting.
 
 const score = [ 20, 10, 50, 20, 100 ]
 const result = score.reduce((acc, curr) => {
